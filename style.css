@@ -10,6 +10,7 @@ html {
 
 main {
   min-height: calc(100vh - 116px);
+  overflow: hidden;
 }
 
 section {
@@ -40,4 +41,38 @@ footer {
 footer h1 {
   font-size: 14px;
   font-weight: 300;
+}
+
+@keyframes move_left {
+  0% {
+    transform: translateX(80%);
+  }
+  100% {
+    transform: translateX(-80%);
+  }
+}
+
+#section-yudai {
+  display: flex;
+
+  animation: move_left 4s linear infinite;
+}
+
+#section-yudai > h2,
+#section-yudai > p {
+  margin-right: 3em;
+}
+
+#section-yudai > div,
+#section-yudai > div > ul {
+  display: flex;
+}
+
+#section-yudai ul {
+  list-style-type: none;
+}
+
+#section-yudai div h3,
+#section-yudai ul li {
+  margin-right: 1em;
 }

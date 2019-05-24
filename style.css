@@ -41,3 +41,17 @@ footer h1 {
   font-size: 14px;
   font-weight: 300;
 }
+
+#id-miyu{
+  color:rgb(0, 17, 255);
+}
+
+.class-miyu{
+  text-align: center;
+  font-weight: 100;
+  font-size: 50px;
+  background-color: #55ff007c;
+}
+.class-miyu:hover{
+  color:red;
+}

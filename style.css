@@ -26,12 +26,18 @@ footer {
 
 header {
   padding: 8px 0;
+}
+
+header h1 {
   font-size: 32px;
   font-weight: 600;
 }
 
 footer {
   padding: 4px 0;
+}
+
+footer h1 {
   font-size: 14px;
   font-weight: 300;
 }

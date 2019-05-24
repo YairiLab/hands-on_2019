@@ -41,3 +41,21 @@ footer h1 {
   font-size: 14px;
   font-weight: 300;
 }
+
+.food{
+  color: #043528
+}
+#section-shunki h1{
+  color: #043528;
+}
+#section-shunki li{
+  display: inline-block;
+  width: 10%;
+  color: #DD2255;
+}
+li:hover{
+  color: #000000; /* 文字色を白にする */
+    background-color: #3a3a3a; /* 背景色をグレー（#3a3a3a）にする */
+    border: 2px solid #000; /* 要素の枠を2pxの太さで、線の種類をsolidに、色を黒にする */
+    text-decoration: none; /* リンクに出てくる下線を無効にする*/
+}

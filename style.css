@@ -29,15 +29,22 @@ header {
 }
 
 header h1 {
-  font-size: 32px;
+  font-size: 100px;
   font-weight: 600;
+  color: blue;
 }
 
 footer {
   padding: 4px 0;
 }
 
+h1{
+  color:blue;
+  font-size: 30px;
+}
+
 footer h1 {
   font-size: 14px;
   font-weight: 300;
+  color:red
 }

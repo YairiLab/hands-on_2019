@@ -43,10 +43,11 @@ footer h1 {
 }
 
 #id-shiori1:hover{
-  color:rgb(0, 0, 255);
+  color:rgb(255, 0, 179);
+  font-size:30px;
 }
 
 .class-shiori2{
-  font-size:35px;
+  font-size:10px;
 }
 

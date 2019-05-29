@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <title>Hands-on Workshop</title>
+    <link rel="stylesheet" type="text/css" href="ress.css" />
+    <link rel="stylesheet" type="text/css" href="js_practice_style.css" />
+  </head>
+
+  <body>
+    <header>
+      <h1>Hands-on Workshop</h1>
+    </header>
+
+    <main>
+      <section id="rotate-boxes">
+        <div id="rotate-boxes__wrapper">
+          <div id="red-box"></div>
+          <div id="green-box"></div>
+          <div id="blue-box"></div>
+          <div id="yellow-box"></div>
+          <div id="orange-box"></div>
+          <div id="pink-box"></div>
+          <div id="purple-box"></div>
+        </div>
+        <button id="rotate-boxes__button">rotate</button>
+      </section>
+
+      <section id="favorite-food">
+        <h2 id="favorite-food__title">好きな食べ物</h2>
+
+        <form id="add-favorite-form">
+          <input type="text" id="new-favorite" name="newFav" />
+          <input type="button" id="add-favorite-button" value="追加する" onclick="addNewFavorite()" />
+        </form>
+
+        <ul id="favorite-food__list">
+          <li>カレー</li>
+          <li>ラーメン</li>
+          <li>ハンバーグ</li>
+          <li>芋焼酎</li>
+        </ul>
+      </section>
+    </main>
+
+    <footer>
+      <p>@ Yairi Lab</p>
+    </footer>
+  </body>
+</html>

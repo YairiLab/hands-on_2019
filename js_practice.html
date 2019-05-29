@@ -62,14 +62,14 @@
       function addNewFavorite() {
         let newFavoriteForm = document.getElementById("add-favorite-form");
         let newFavorite = newFavoriteForm.newFav.value;
-        if (newFavorite === "") {
-          alert("好きな食べ物を入力してください");
-        } else {
+        if (newFavorite) {
           let listItem = document.createElement("li");
           listItem.textContent = newFavorite;
           let favoriteFoodList = document.getElementById("favorite-food__list");
           favoriteFoodList.appendChild(listItem);
           newFavoriteForm.reset();
+        } else {
+          alert("好きな食べ物を入力してください");
         }
       }
     </script>

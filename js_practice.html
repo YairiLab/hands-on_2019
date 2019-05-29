@@ -59,14 +59,34 @@
       rotateButton.addEventListener("click", rotateBoxes, false);
 
       // 好きな食べ物の追加
+      // 読み込みが完了したらローカルストレージから好きな食べ物を取ってくる
+      let favoriteFoodFromLocalStorage;
+      window.onload = () => {
+        favoriteFoodFromLocalStorage = localStorage.getItem("myFavoriteFood");
+        if (favoriteFoodFromLocalStorage) {
+          let favoriteFoodList = favoriteFoodFromLocalStorage.split(",");
+          favoriteFoodList.forEach(favoriteFood => {
+            addNewListItemToFavoriteList(favoriteFood);
+          });
+        }
+      };
+
+      // liを作ってulの一番最後に挿入する関数
+      function addNewListItemToFavoriteList(favoriteFood) {
+        let listItem = document.createElement("li");
+        listItem.textContent = favoriteFood;
+        let favoriteFoodList = document.getElementById("favorite-food__list");
+        favoriteFoodList.appendChild(listItem);
+      }
+
+      // フォームに入力されてたらその文字列をリストに追加したあと、ローカルストレージにもセット
       function addNewFavorite() {
         let newFavoriteForm = document.getElementById("add-favorite-form");
         let newFavorite = newFavoriteForm.newFav.value;
         if (newFavorite) {
-          let listItem = document.createElement("li");
-          listItem.textContent = newFavorite;
-          let favoriteFoodList = document.getElementById("favorite-food__list");
-          favoriteFoodList.appendChild(listItem);
+          addNewListItemToFavoriteList(newFavorite);
+          favoriteFoodFromLocalStorage ? (favoriteFoodFromLocalStorage += "," + newFavorite) : (favoriteFoodFromLocalStorage = newFavorite);
+          localStorage.setItem("myFavoriteFood", favoriteFoodFromLocalStorage);
           newFavoriteForm.reset();
         } else {
           alert("好きな食べ物を入力してください");

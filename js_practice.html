@@ -60,12 +60,12 @@
 
       // 好きな食べ物の追加
       // 読み込みが完了したらローカルストレージから好きな食べ物を取ってくる
-      let favoriteFoodFromLocalStorage;
+      let favoriteFoodArray = [];
       window.onload = () => {
-        favoriteFoodFromLocalStorage = localStorage.getItem("myFavoriteFood");
-        if (favoriteFoodFromLocalStorage) {
-          let favoriteFoodList = favoriteFoodFromLocalStorage.split(",");
-          favoriteFoodList.forEach(favoriteFood => {
+        let favoriteFoodJsonFromLocalStorage = localStorage.getItem("myFavoriteFood");
+        if (favoriteFoodJsonFromLocalStorage) {
+          favoriteFoodArray = JSON.parse(favoriteFoodJsonFromLocalStorage);
+          favoriteFoodArray.forEach(favoriteFood => {
             addNewListItemToFavoriteList(favoriteFood);
           });
         }
@@ -75,8 +75,8 @@
       function addNewListItemToFavoriteList(favoriteFood) {
         let listItem = document.createElement("li");
         listItem.textContent = favoriteFood;
-        let favoriteFoodList = document.getElementById("favorite-food__list");
-        favoriteFoodList.appendChild(listItem);
+        let favoriteFoodListDom = document.getElementById("favorite-food__list");
+        favoriteFoodListDom.appendChild(listItem);
       }
 
       // フォームに入力されてたらその文字列をリストに追加したあと、ローカルストレージにもセット
@@ -85,8 +85,8 @@
         let newFavorite = newFavoriteForm.newFav.value;
         if (newFavorite) {
           addNewListItemToFavoriteList(newFavorite);
-          favoriteFoodFromLocalStorage ? (favoriteFoodFromLocalStorage += "," + newFavorite) : (favoriteFoodFromLocalStorage = newFavorite);
-          localStorage.setItem("myFavoriteFood", favoriteFoodFromLocalStorage);
+          favoriteFoodArray.push(newFavorite);
+          localStorage.setItem("myFavoriteFood", JSON.stringify(favoriteFoodArray));
           newFavoriteForm.reset();
         } else {
           alert("好きな食べ物を入力してください");

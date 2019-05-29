@@ -46,5 +46,32 @@
     <footer>
       <p>@ Yairi Lab</p>
     </footer>
+
+    <script>
+      // ボックスのローテーション
+      let rotateBoxes = () => {
+        let boxWrapper = document.getElementById("rotate-boxes__wrapper");
+        let lastBox = boxWrapper.firstElementChild;
+        boxWrapper.removeChild(lastBox);
+        boxWrapper.appendChild(lastBox);
+      };
+      let rotateButton = document.getElementById("rotate-boxes__button");
+      rotateButton.addEventListener("click", rotateBoxes, false);
+
+      // 好きな食べ物の追加
+      function addNewFavorite() {
+        let newFavoriteForm = document.getElementById("add-favorite-form");
+        let newFavorite = newFavoriteForm.newFav.value;
+        if (newFavorite === "") {
+          alert("好きな食べ物を入力してください");
+        } else {
+          let listItem = document.createElement("li");
+          listItem.textContent = newFavorite;
+          let favoriteFoodList = document.getElementById("favorite-food__list");
+          favoriteFoodList.appendChild(listItem);
+          newFavoriteForm.reset();
+        }
+      }
+    </script>
   </body>
 </html>

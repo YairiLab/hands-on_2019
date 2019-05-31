@@ -1,0 +1,105 @@
+* {
+  line-height: 2em;
+  font-size: 16px;
+}
+
+body,
+html {
+  margin: 0;
+}
+
+main {
+  min-height: calc(100vh - 116px);
+}
+
+section {
+  padding: 16px 5vw;
+}
+
+header,
+footer {
+  background-color: #043528;
+  color: white;
+  text-align: center;
+  letter-spacing: 0.05em;
+}
+
+header {
+  padding: 8px 0;
+}
+
+header h1 {
+  font-size: 32px;
+  font-weight: 600;
+}
+
+footer {
+  padding: 4px 0;
+}
+
+footer h1 {
+  font-size: 14px;
+  font-weight: 300;
+}
+
+/************************************************************************************/
+
+#rotate-boxes__wrapper {
+  display: flex;
+}
+
+#rotate-boxes__wrapper > div {
+  margin-right: 16px;
+  width: 120px;
+  height: 120px;
+}
+
+#red-box {
+  background-color: red;
+}
+#green-box {
+  background-color: green;
+}
+#blue-box {
+  background-color: blue;
+}
+#yellow-box {
+  background-color: yellow;
+}
+#orange-box {
+  background-color: orange;
+}
+#pink-box {
+  background-color: pink;
+}
+#purple-box {
+  background-color: purple;
+}
+
+#rotate-boxes__button,
+#add-favorite-button {
+  padding: 0.5em 1em;
+  font-weight: bold;
+  letter-spacing: 0.05em;
+  border-radius: 0.5em;
+  box-shadow: 0 0 4px 0px black;
+  cursor: pointer;
+  margin-top: 32px;
+}
+
+/********************************************************************************/
+
+#new-favorite {
+  border: solid 1px #333;
+  padding: 0 0.5em;
+  margin-right: 16px;
+  margin-bottom: 16px;
+}
+
+#favorite-food {
+  margin-top: 32px;
+}
+
+#favorite-food__title {
+  font-size: 24px;
+}

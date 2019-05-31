@@ -7,7 +7,7 @@
     <link rel="stylesheet" type="text/css" href="js_practice_style.css" />
   </head>
 
-  <body>
+  <body onload="reload_favorite()">
     <header>
       <h1>Hands-on Workshop</h1>
     </header>
@@ -23,7 +23,9 @@
           <div id="pink-box"></div>
           <div id="purple-box"></div>
         </div>
-        <button id="rotate-boxes__button">rotate</button>
+        <button id="rotate-boxes__button" onclick="rotate()">左回し</button>
+        <button id="right_rotate-boxes__button" onclick="right_rotate()">右回し</button>
+
       </section>
 
       <section id="favorite-food">
@@ -46,5 +48,6 @@
     <footer>
       <p>@ Yairi Lab</p>
     </footer>
+    <script src="./js_practice.js"></script>
   </body>
 </html>
